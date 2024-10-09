@@ -54,8 +54,19 @@ Steps
   - The blogpost at the top did use `config.toml` instead of `hugo.toml`, so just try renaming.
   - Now get different error. Progress! `Error building site...<.Site.Params.dateFormat>: invalid value; expected string`
   - I get the same error locally too.
-  - Search for `dataFormat` in the repo, find example, and copy `dateFormat = "January 2, 2006"` into params section of config file.
+  - Search for `dateFormat` in the repo, find example, and copy `dateFormat = "January 2, 2006"` into params section of config file.
   - Site builds locally...now to try on cloudflare!
-  
-
+  - Actually get issue I had before but did not write. There is some delay in cloudflare looking at the latest commit. It is still using old commit.
+  - Aaaand it turns out I actually forgot to push the changes... Doh! There is still some kind of delay though.
+  - It works!
+  - When I click on blogpost though, it goes to `example.org/posts/new-website` so need to update that.
+  - Find https://developers.cloudflare.com/pages/how-to/custom-branch-aliases/
+  - This doc is for getting access other other branches of my github repo, but importantly it points me to the 'Custom domains' tab. I try adding `www.lovkush.com`. Says it might take 48 hours to update.
+  - And now I go to Claude to try to understand all this. This does help me get some sense of what is going on, e.g. how when somebody enters `www.lovkush.com` somehow request goes to hover, then to cloudflare, and then via DNS settings in cloudflare to the deployed page hosted on cloudflare. Also explaining how `www` is not actually necessary and is just an old convention that has stuck around!
+  - After fiddlig with DNS settings in cloudflare, now when I go to www.lovkush.com I no longer get my old website, and instead get error message. Seems it is because I added a `/` at the end of the url provided in the 'content' entry in dns management table. Now get error 'Connection time out'. Maybe it is something about timing. Wait a bit and try again - it goes to original website! Hmm...this is confusing.
+  - Ask Claude for suggestions. Try purging cache and using incognito browser and still goes to original website. Claude also suggested just need to wait for DNS changes to propagate throughout the system. Hmm.
+  - After playing around, looks like difference is using http vs https. With secure one it goes to new website but not with http. So need to find rule on cloudflare for this!
+  - Spend maybe hour now, with Claude giving detailed instructions, trying to debug. Do not make any progress so take break.
+  - Come back and try to undo changes Claude suggested (around always using https). Now it seems to work using `lovkush.com` while `www.lovkush.com` points to my old website.
+  - Next, update the base url, because it was still using default of example.org.
 
