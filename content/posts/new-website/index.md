@@ -69,4 +69,5 @@ Steps
   - Spend maybe hour now, with Claude giving detailed instructions, trying to debug. Do not make any progress so take break.
   - Come back and try to undo changes Claude suggested (around always using https). Now it seems to work using `lovkush.com` while `www.lovkush.com` points to my old website.
   - Next, update the base url, because it was still using default of example.org.
+  - And that resulted in bugs...was `lovkush.com/`. Now trying `https://lovkush.com/`
 
