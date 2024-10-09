@@ -48,3 +48,4 @@ enableGitInfo = true
 [params]
   showPostsOnHomePage = "recent"
   numberPostsOnHomePage = 3
+  dateFormat = "January 2, 2006"

@@ -52,5 +52,10 @@ Steps
   - Click 'Save and deploy'.
   - Get bug... `Unable to locate config file or config directory`
   - The blogpost at the top did use `config.toml` instead of `hugo.toml`, so just try renaming.
+  - Now get different error. Progress! `Error building site...<.Site.Params.dateFormat>: invalid value; expected string`
+  - I get the same error locally too.
+  - Search for `dataFormat` in the repo, find example, and copy `dateFormat = "January 2, 2006"` into params section of config file.
+  - Site builds locally...now to try on cloudflare!
+  
 
 
