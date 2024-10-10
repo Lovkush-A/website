@@ -51,7 +51,7 @@ Steps
   - Select Hugo from Framework preset. Assume the other things are correct - I think it matches what I saw from the docs for gokarna.
   - Click 'Save and deploy'.
   - Get bug... `Unable to locate config file or config directory`
-  - The blogpost at the top did use `config.toml` instead of `hugo.toml`, so just try renaming.
+  - The blogpost by peluche did use `config.toml` instead of `hugo.toml`, so just try renaming.
   - Now get different error. Progress! `Error building site...<.Site.Params.dateFormat>: invalid value; expected string`
   - I get the same error locally too.
   - Search for `dateFormat` in the repo, find example, and copy `dateFormat = "January 2, 2006"` into params section of config file.
@@ -70,4 +70,7 @@ Steps
   - Come back and try to undo changes Claude suggested (around always using https). Now it seems to work using `lovkush.com` while `www.lovkush.com` points to my old website.
   - Next, update the base url, because it was still using default of example.org.
   - And that resulted in bugs...was `lovkush.com/`. Now trying `https://lovkush.com/`
+  - I decide to stop working on this and come back the next day.
+  - I then do a test and `lovkush.com` works! But none of the other combinations work...(using `www` or using `http`)
 
+I am going to count this as a win and stop here. Future updates will be explained in future posts!
