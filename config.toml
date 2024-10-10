@@ -2,7 +2,7 @@ baseURL = "https://lovkush.com/"
 defaultContentLanguage = "en"
 languageCode = "en"
 
-title = "Lovkush"
+title = "Lovkush 🔸"
 
 theme = "gokarna"
 
@@ -29,23 +29,35 @@ enableGitInfo = true
     name = "Posts"
 
     # Weights are used to determine the ordering
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 2
+    weight = 3
     
   [[menu.main]]
     identifier = "github"
     url = "https://github.com/Lovkush-A/website"
-    weight = 3
-    
-    # We use feather-icons: https://feathericons.com/
+    weight = 4
     pre = "<span data-feather='github'></span>"
+
+  [[menu.main]]
+    name = "About"
+    url = "/about-me/"
+    weight = 1
+    
+
 
 [params]
   showPostsOnHomePage = "recent"
   numberPostsOnHomePage = 3
   dateFormat = "January 2, 2006"
+  footer = ""
+  description = """Mathematician → Lecturer → Data Scientist → AI Safety Researcher"""
+    socialIcons = [
+    {name = "twitter", url = "https://twitter.com/lovkushatleeds"},
+    {name = "linkedin", url = "https://www.linkedin.com/in/lovkush-agarwal-%F0%9F%94%B8-481737131/"},
+  ]
+  metaKeywords = ["blog", "gokarna", "hugo"]
