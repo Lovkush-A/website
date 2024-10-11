@@ -47,12 +47,9 @@ enableGitInfo = true
     name = "About"
     url = "/about-me/"
     weight = 1
-    
 
 
 [params]
-  showPostsOnHomePage = "recent"
-  numberPostsOnHomePage = 3
   dateFormat = "January 2, 2006"
   footer = ""
   description = """Mathematician → Lecturer → Data Scientist → AI Safety Researcher"""
@@ -60,4 +57,5 @@ enableGitInfo = true
     {name = "twitter", url = "https://twitter.com/lovkushatleeds"},
     {name = "linkedin", url = "https://www.linkedin.com/in/lovkush-agarwal-%F0%9F%94%B8-481737131/"},
   ]
-  metaKeywords = ["blog", "gokarna", "hugo"]
+  metaKeywords = ["blog", "lovkush", "Lovkush", "agarwal", "Agarwal", "ai safety", "teaching", "ai"]
+  avatarURL = "/images/avatar.jpg"
