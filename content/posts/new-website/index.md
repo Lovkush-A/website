@@ -1,11 +1,9 @@
 ---
 date: 2024-10-09
-# description: ""
-# image: ""
 lastmod: 2024-10-09
 showTableOfContents: false
-# tags: ["",]
-title: "New Website"
+tags: ["software engineering","cloudflare", "github", "hover", "hugo"]
+title: "Creating this new website"
 type: "post"
 ---
 
